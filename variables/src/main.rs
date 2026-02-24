@@ -1,14 +1,7 @@
 fn main() {
-    let x = 5;
-    println!("X value is {x}");
-
-    let x = 8;
-    println!("X values is {x}");
-
-    {
-        let x = x * 30;
-        println!("X value is {x}");
-    }
-
-    println!("X values is {x}");
+    let tup: (u32, f64, &str) = (45, 45.87, "45");
+    let x = tup.0;
+    let y = tup.1;
+    let z = tup.2;
+    println!("Values {x}, {y}, {z}");
 }
