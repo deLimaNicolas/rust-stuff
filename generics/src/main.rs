@@ -7,12 +7,12 @@ fn main() {
     println!("Largest is {largest2}");
 }
 
-fn get_largest(list: &Vec<usize>) -> usize {
-    let mut largest = list[0];
+fn get_largest<T: std::cmp::PartialOrd>(list: &[T]) -> &T {
+    let mut largest = &list[0];
 
     for num in list {
-        if *num > largest {
-            largest = *num;
+        if num > largest {
+            largest = num;
         }
     }
 
